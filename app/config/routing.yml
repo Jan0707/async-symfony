@@ -1,0 +1,7 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+bcc_resque:
+    resource: "@BCCResqueBundle/Resources/config/routing.xml"
+    prefix:   /resque

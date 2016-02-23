@@ -1,0 +1,13 @@
+services:
+
+    app_bundle.heavy_lifting:
+        class: AppBundle\Service\HeavyLiftingService
+        arguments:
+            - @logger
+        tags:
+            - { name: monolog.logger, channel: app }
+
+    app_bundle.listener.heavy_lifting:
+        class: AppBundle\EventListener\HeavyLiftingSubscriber
+        arguments:
+            - @app_bundle.heavy_lifting
